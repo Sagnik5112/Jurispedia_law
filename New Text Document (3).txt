@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JurisPedia - Empowering Legal Minds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fefefe;
+      color: #1e1e1e;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    nav {
+      background-color: #4b0082;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h3 {
+  color: #1a1a1a;
+  margin: 0;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    #darkToggle {
+      background: #fff;
+      color: #4b0082;
+      padding: 5px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/mnt/data/WhatsApp%20Image%202025-05-22%20at%2019.27.39_33f735ea.jpg') no-repeat center center/cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      color: #4b0082;
+    }
+    section {
+      padding: 40px;
+      text-align: justify;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .course-list, .why-us {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .course-box, .feature-box {
+      background-color: #ffffff;
+      border-left: 5px solid #4b0082;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .course-box:hover, .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .feature-box i {
+      margin-right: 10px;
+      color: #4b0082;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .contact-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4b0082;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    .whatsapp-button img {
+      width: 60px;
+      height: 60px;
+    }
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+    }
+    .testimonial {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background: #fff;
+      border-left: 4px solid #4b0082;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #2c003e;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h3>JurisPedia</h3>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#branches">Branches</a></li>
+    </ul>
+    <div id="darkToggle">Dark Mode</div>
+  </nav>
+
+  <header>
+    <h1>JURISPEDIA</h1>
+    <p style="color: #ffffff; font-weight: 600;">EMPOWERING LEGAL MINDS, SHAPING TOMORROW</p>
+    <h2 style="color: #fcd05d;">A UNIT OF LAW & BEYOND</h2>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About JurisPedia</h2>
+    <p>
+      JurisPedia is a premier academic initiative under the banner of Law & Beyond, designed to foster excellence in legal education and professional development. Built on the principles of accessibility, academic rigor, and mentorship, JurisPedia serves as a one-stop platform for law aspirants, students, and professionals. Our holistic approach integrates classroom teaching with skill-based learning, offering tailored guidance for entrance examinations, semester preparation, and judicial service exams. Through curated mentorship, internship linkages, and expert-led sessions, JurisPedia bridges the gap between theoretical knowledge and practical application, empowering learners to navigate the legal landscape with confidence and clarity.
+    </p>
+
+    <h2>About the Founder</h2>
+    <p>
+      Mr. Sagnik Chakraborty, the visionary founder of JurisPedia, is a distinguished academician and legal educator with a robust background in both theory and practice. An alumnus of the Department of Law, University of Burdwan, Mr. Chakraborty is currently a Research Scholar at the National Law University, Tripura, specialising in Corporate Law, Criminal Law and Forensic Sciences. With a deep commitment to inclusive and transformative education, he founded JurisPedia to democratize access to quality legal training.
+    </p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Why Choose Us?</h2>
+    <div class="why-us">
+      <div class="feature-box"><i class="fas fa-chalkboard-teacher"></i>Experienced Faculty and Mentors</div>
+      <div class="feature-box"><i class="fas fa-video"></i>Interactive Live Classes with Doubt Clearing</div>
+      <div class="feature-box"><i class="fas fa-book"></i>Comprehensive Study Materials and Resources</div>
+      <div class="feature-box"><i class="fas fa-user-graduate"></i>Personalized Academic Mentorship and Career Guidance</div>
+      <div class="feature-box"><i class="fas fa-laptop-house"></i>Flexible Online and Offline Modes</div>
+    </div>
+  </section>
+
+  <section id="courses" data-aos="fade-up">
+    <h2>Courses Offered</h2>
+    <div class="course-list">
+      <div class="course-box">CLAT UG</div>
+      <div class="course-box">CUET UG</div>
+      <div class="course-box">CULET (Calcutta University)</div>
+      <div class="course-box">Burdwan University Law Entrance</div>
+      <div class="course-box">Other Law Entrance Exams</div>
+      <div class="course-box">Semester Guidance</div>
+      <div class="course-box">AIBE Preparation</div>
+      <div class="course-box">LLM Entrance</div>
+      <div class="course-box">CUET PG</div>
+      <div class="course-box">CLAT PG</div>
+      <div class="course-box">Judicial Exam Guidance</div>
+      <div class="course-box">Other Competitive Exams</div>
+    </div>
+  </section>
+
+  <section id="testimonials" data-aos="fade-up">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">"JurisPedia's mentorship helped me crack CLAT PG with confidence!" – Ananya S.</div>
+      <div class="testimonial">"Classes at Chuchura were interactive and full of insights." – Ritam G.</div>
+      <div class="testimonial">"From CUET to judicial prep, everything was seamless!" – Megha K.</div>
+    </div>
+  </section>
+
+  <section id="branches" data-aos="fade-up">
+    <h2>Mode & Branches</h2>
+    <p>
+      We offer courses in both online and offline modes with branches located in Chuchura & Barrackpore, ensuring accessibility and convenience for our students.
+    </p>
+    <iframe src="https://maps.google.com/maps?q=JurisPedia%20Chuchura&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Ask Your Query</h2>
+    <div class="contact-box">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Question"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>📧 Email: JurisPedia2025@gmail.com</p>
+    <p>📬 Blog Submissions: Jurispedia2025@gmail.com</p>
+    <p>📞 Contact: 7686035112</p>
+    <p>&copy; 2025 JurisPedia | Empowering Legal Minds</p>
+  </footer>
+
+  <div class="whatsapp-button">
+    <a href="https://wa.me/917686035112" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp" />
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("darkToggle").onclick = function () {
+      document.body.classList.toggle("dark-mode");
+    };
+  </script>
+</body>
+</html>
+```
+
+---
+
